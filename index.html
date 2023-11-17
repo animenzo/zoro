@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+    }
+ html,  body{
+    height: 100%;
+     width: 100%; 
+}
+#main{
+   
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+.luffy
+{
+    height: 120px;
+    width: 100%;
+   
+    border-bottom: 2px solid white;
+    display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     position: relative;
+}
+.luffy h1{
+    font-size: 5vw;
+    position: relative;
+    z-index: 9;
+    mix-blend-mode: difference;
+}
+.luffy img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    position: absolute;
+    /* transform: translate(-50%,-50%); */
+     opacity: 0; 
+     transition: all linear 0.3s;
+}
+     </style>
+<body >
+   
+    <div id="main">
+        <div class="luffy"> <h1>LUFFY</h1>
+            <img src="https://i.pinimg.com/originals/50/08/ef/5008efb9df96969624d2674645027a3a.png" alt="">
+       
+        </div>
+       <div class="luffy">
+            <h1>ZORO</h1>
+            <img src="https://images6.alphacoders.com/133/1331472.png" alt="">
+        </div>
+        <div class="luffy">
+           <h1> SANJI</h1>
+           <img src="https://moewalls.com/wp-content/uploads/2023/06/sanji-diable-jambe-one-piece-thumb.jpg" alt="">
+        </div>
+        <div class="luffy">
+            <h1>USSOP</h1>
+        <img src="https://onepiecetheories.com/wp-content/uploads/2023/09/one-piece-usopp-time-skip-1200x1200.jpg" alt="">
+    </div>
+    </div>
+</div>
+<script>
+
+var luffy = document.querySelectorAll(".luffy");
+luffy.forEach(function(val){
+
+    val.addEventListener("mouseenter",function(){
+val.childNodes[3].style.opacity = 1;
+    })
+    val.addEventListener("mouseleave",function(){
+val.childNodes[3].style.opacity = 0;
+    })
+    val.addEventListener("mousemove",function(dets){
+val.childNodes[3].style.left = dets.x + "px";
+
+    })
+})
+
+
+</script>
+
+
+
+  
+</body>
+</html>
